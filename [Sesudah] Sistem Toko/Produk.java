@@ -1,19 +1,16 @@
 public class Produk {
-    // Semua atribut PRIVATE (sesuai soal 4a)
     private String kode;
     private String nama;
     private double harga;
     private int stok;
 
-    // Constructor 1: tanpa stok (stok otomatis 0)
     public Produk(String kode, String nama, double harga) {
         this.kode = kode;
         this.nama = nama;
-        setHarga(harga);   // lewat setter supaya divalidasi
+        setHarga(harga);
         this.stok = 0;
     }
 
-    // Constructor 2: lengkap dengan stok
     public Produk(String kode, String nama, double harga, int stok) {
         this.kode = kode;
         this.nama = nama;
@@ -21,13 +18,11 @@ public class Produk {
         setStok(stok);
     }
 
-    // ===== Getter =====
     public String getKode()  { return kode; }
     public String getNama()  { return nama; }
     public double getHarga() { return harga; }
     public int getStok()     { return stok; }
 
-    // ===== Setter (dengan validasi) =====
     public void setKode(String kode) { this.kode = kode; }
     public void setNama(String nama) { this.nama = nama; }
 
